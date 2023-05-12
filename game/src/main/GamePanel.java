@@ -25,13 +25,11 @@ public class GamePanel extends JPanel {
     }
 
     public void initializeEverything() {
-        // Go through and initialize each item
         for (Entity item : this.getEntities()) {
             item.initialize();
         }
     }
     public void moveEverythingOneStep() {
-        // Go through and move each item one step
         for (Entity item : this.getEntities()) {
             item.moveOneStep();
             item.handleCollisions(this.getEntities());
@@ -45,7 +43,6 @@ public class GamePanel extends JPanel {
     }
     public void paint(Graphics g) {
 
-        // This does the default painting first
         super.paint(g);
         Font font = new Font("Monospaced>", Font.PLAIN, 14);
         Font font2 = new Font("Monospaced>", Font.BOLD, 16);
@@ -66,7 +63,6 @@ public class GamePanel extends JPanel {
         textInstructions3.draw(g);
         textInstructions4.draw(g);
         textInstructions5.draw(g);
-        // Go through and draw each item
         for (Entity item : this.getEntities()) {
             item.draw(g);
         }
