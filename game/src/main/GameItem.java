@@ -10,7 +10,6 @@ public class GameItem extends Entity{
 
     public GameItem(GamePanel gp, String imageFile){
         super(gp, imageFile);
-       // this.keyListener = kl;
         if (imageFile == "paper.png"){
             this.setName("paper");
         }
@@ -20,8 +19,6 @@ public class GameItem extends Entity{
         if (imageFile == "rock.png"){
             this.setName("rock");
         }
-//        setDefaultVals();
-//        getImg();
     }
     public void initialize() {
         int xPos, yPos;
