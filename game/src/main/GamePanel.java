@@ -16,7 +16,7 @@ public class GamePanel extends JPanel {
     Sound sound = new Sound();
     public GamePanel(){
         this.setPreferredSize(new Dimension(screenWidth, screenHeight));
-       // this.setBackground(new Color(240,248,255));
+        // this.setBackground(new Color(240,248,255));
         this.setBackground(Color.yellow);
         this.setDoubleBuffered(true);
         this.addKeyListener(keyListener);
@@ -42,19 +42,18 @@ public class GamePanel extends JPanel {
         return entities;
     }
     public void paint(Graphics g) {
-
         super.paint(g);
         Font font = new Font("Monospaced>", Font.PLAIN, 14);
         Font font2 = new Font("Monospaced>", Font.BOLD, 16);
         Font fontInst = new Font("Monospaced>", Font.BOLD, 11);
-        Text text = new Text("Привет! Добро пожаловать в симуляцию игры", font, 35,20);
-        Text text2 = new Text("\"Камень. Ножницы. Бумага\"", font2, 80,55);
-        Text text3 = new Text("разработанную Ержаном для отборочного этапа n!", font, 22,35);
-        Text textInstructions = new Text("Управления клавишами:", fontInst, 10,565);
-        Text textInstructions2 = new Text("C - добавить рандомное количество ножниц", fontInst, 10,580);
-        Text textInstructions3 = new Text("V - добавить рандомное количество камней", fontInst, 10,593);
-        Text textInstructions4 = new Text("B - добавить рандомное количество бумаг", fontInst, 10,606);
-        Text textInstructions5 = new Text("Пробел - удалить все объекты", fontInst, 10,619);
+        Text text = new Text("Hello! Welcome to the simulation game", font, 35,20);
+        Text text2 = new Text("\"Rock. Scissors. Paper.\"", font2, 80,55);
+        Text text3 = new Text("developed by Yerzhan Yerbatyr.", font, 22,35);
+        Text textInstructions = new Text("Key controls:", fontInst, 10,565);
+        Text textInstructions2 = new Text("C - add a random number of scissors", fontInst, 10,580);
+        Text textInstructions3 = new Text("V - add a random number of stones", fontInst, 10,593);
+        Text textInstructions4 = new Text("B - add a random number of paper", fontInst, 10,606);
+        Text textInstructions5 = new Text("Space - delete all objects", fontInst, 10,619);
         text.draw(g);
         text2.draw(g);
         text3.draw(g);
@@ -107,4 +106,3 @@ public class GamePanel extends JPanel {
     public void clear(){
         this.getEntities().clear();
     }
-}
